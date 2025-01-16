@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        @@include("./partials/title-meta.html", {"title": "AllSecureX"})
+        <link href="assets/plugins/datatables/datatable.css" rel="stylesheet" type="text/css" />
+        @@include('./partials/head-css.html')
+    </head>
+
+    <body id="body" class="dark-sidebar">
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/left-sidebar.html')
+        <!-- end leftbar-tab-menu-->
+
+        <!-- Top Bar Start -->
+        @@include('./partials/topbar.html')
+        <!-- Top Bar End -->
+
+        <div class="page-wrapper">
+
+            <!-- Page Content-->
+            <div class="page-content-tab">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-end">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">AllSecureX</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item"><a href="#">Business Impact</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item active">Breach Likelihood</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Breach Likelihood</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col">                      
+                                            <h4 class="card-title">Breach Likelihood Probability Analysis </h4>                      
+                                        </div><!--end col-->
+                                    </div>  <!--end row-->                                  
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="chart-demo">
+                                        <div id="apex_line1" class="apex-charts"></div>
+                                    </div>                                        
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card"> 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col align-self-center">
+                                            <h6 class="font-15 m-0 mb-1">Affected Domains</h6>
+                                            <p class="text-muted mb-0">Last Month : 150 <i class="mdi mdi-menu-up text-success"></i></p>
+                                        </div><!--end col-->  
+                                        <div class="col-auto align-self-center">                                              
+                                            <div class="">
+                                                <div id="bar-1" class="apex-charts mb-n4"></div>
+                                            </div>
+                                        </div><!--end col-->                                      
+                                    </div><!--end row-->                                                                                                                                  
+                                </div><!--end card-body-->                                
+                            </div><!--end card-->  
+                        </div><!--end col--> 
+                        
+                        <div class="col-md-4">
+                            <div class="card"> 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col align-self-center">
+                                            <h6 class="font-15 m-0 mb-1">Timeline</h6>
+                                            <p class="text-muted mb-0">Last Month : +4% <i class="mdi mdi-menu-down text-danger"></i></p>
+                                        </div><!--end col-->  
+                                        <div class="col-auto align-self-center">                                              
+                                            <div class="">
+                                                <div id="line-1" class="apex-charts"></div>
+                                            </div>
+                                        </div><!--end col-->                                      
+                                    </div><!--end row-->                                                                                                                                  
+                                </div><!--end card-body-->                                
+                            </div><!--end card-->  
+                        </div><!--end col--> 
+                        <div class="col-md-4">
+                            <div class="card"> 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col align-self-center">
+                                            <h6 class="font-15 m-0 mb-1">Breach Liklihood Percentage</h6>
+                                            <p class="text-muted mb-0"> 40% <i class="mdi mdi-menu-up text-success"></i></p>
+                                        </div><!--end col-->  
+                                        <div class="col-auto align-self-center">                                              
+                                            <div class="">
+                                                <div id="radialBar-1" class="apex-charts my-n2"></div>
+                                            </div>
+                                        </div><!--end col-->                                      
+                                    </div><!--end row-->                                                                                                                                  
+                                </div><!--end card-body-->                                
+                            </div><!--end card-->  
+                        </div><!--end col-->
+                    </div><!--end row-->    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Attack Type Overview </h4>
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table" id="datatable_1">
+                                            <thead class="thead-light">
+                                              <tr>
+                                                <th>Security Domain</th>
+                                                <th>Control.</th>
+                                                <th>Issue</th>
+                                                <th>Attack Type</th>
+                                                <th>Probability</th>
+                                                <th>Indusry Average</th>
+                                                <th>Severity</th>
+                                                <!-- <th data-type="date" data-format="YYYY/DD/MM">Start Date</th> -->
+                                                
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email Security</td>
+                                                    <td>SPF Misonfiguration</td>
+                                                    <td>SPF Record Missing</td>
+                                                    <td>Phishing</td>
+                                                    <td>80%</td>
+                                                    <td>90%</td>
+                                                    <td>Low</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email Security</td><td>SPF Misonfiguration</td><td>Malformed</td><td>Mail authentication</td><td>65%</td><td>55%</td><td>Low <i class="mdi mdi-arrow-up-drop-circle-outline text-success ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Application Security</td><td>Insecure HTTP</td><td>PUT Method</td><td>Malacious File Upload</td><td>45%</td><td>42%</td><td>Medium <i class="mdi mdi-arrow-down-drop-circle-outline text-warning ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Application Security</td><td>Security Headers</td><td> Missing X-XSS-Protection </td><td>XSS Attacks</td><td>65%</td><td>60%</td><td>Low <i class="mdi mdi-arrow-up-drop-circle-outline text-success ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Application Security</td><td>Cookie Security</td><td> Missing 'Secure' Attribute </td><td>Data Lekage</td><td>65%</td><td>60%</td><td>Low <i class="mdi mdi-arrow-up-drop-circle-outline text-success ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Application Security</td><td> HSTS Config</td><td> Missing HSTS </td><td>Reduce HTTPS Security</td><td>65%</td><td>60%</td><td>Low <i class="mdi mdi-arrow-up-drop-circle-outline text-success ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Network Security</td><td> TLS/SSL Certificate</td><td> SAN Misconfgured </td><td>Compatability Issue</td><td>80%</td><td>80%</td><td>Informational <i class="mdi mdi-arrow-down-drop-circle-outline text-primary ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Network Security</td><td> TLS/SSL Certificate</td><td> OCSP URI identification </td><td>Reduce Certificate Validations</td><td>80%</td><td>80%</td><td>Informational <i class="mdi mdi-arrow-down-drop-circle-outline text-primary ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Data Breach</td><td> Leaked Credential</td><td> Plain Text </td><td>Unauthorised Access</td><td>78%</td><td>65%</td><td>High <i class="mdi mdi-arrow-down-drop-circle-outline text-danger ml-1"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Data Breach</td><td> Sensitive Information</td><td> productRoadmap.pdf </td><td>Information Disclosure</td><td>78%</td><td>65%</td><td>High <i class="mdi mdi-arrow-down-drop-circle-outline text-danger ml-1"></i></td>
+                                                </tr>  
+                                                                                                                                       
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+                </div><!-- container -->
+
+                <!--Start Rightbar-->
+                @@include('./partials/right-sidebar.html')
+                 <!--end Rightbar-->
+                 
+                <!--Start Footer-->
+                @@include('./partials/footer.html')                
+                <!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!-- Javascript  -->   
+        <script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/plugins/datatables/simple-datatables.js"></script>
+        <script src="assets/pages/analytics-customers.init.js"></script>
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+    <!--end body-->
+</html>
